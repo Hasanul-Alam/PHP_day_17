@@ -8,6 +8,7 @@ class HelloWorld
     public $y;
     public $z;
     public $check;
+    public $data = [];
 
     public function __construct()
     {
@@ -109,11 +110,68 @@ class HelloWorld
         }*/
 
 //        Do while loop
-        do{
+        /*do{
             echo '<br/>';
             echo $this->x;
             $this->x++;
         }
-        while($this->x > 50);
+        while($this->x > 50);*/
+
+//        Array
+
+        /*$this->data = [100, 200, 300, 'BITM', "SEIP", true, false,50.20];
+        foreach ($this->data as $item){
+            echo '<br/>';
+            echo $item;
+        }*/
+
+        $this->data = [
+            0 => [
+                'name'      => 'Hasanul',
+                'email'     => 'hasanulalam0000@gmail.com',
+                'mobile'    => [
+                    'person' => '01797888924',
+                    'gurdian' => '01728258026',
+                ]
+            ],
+            1 => [
+                'name'      => 'Nishat',
+                'email'     => 'nisataffifa@gmail.com',
+                'mobile'    => [
+                    'person' => '01785412264',
+                    'gurdian' => '01518646197',
+                ]
+            ],
+            2 => [
+                'name'      => 'Rahima',
+                'email'     => 'rahima@gmail.com',
+                'mobile'    => [
+                    'person' => '01726458925',
+                    'gurdian' => '01954784264',
+                ]
+            ]
+        ];
+
+        foreach ($this->data as $item){
+            echo '<br/>';
+//            echo $item['name'].' '.$item['email'].' '.$item['mobile'];
+            foreach ($item as $value){
+                if(is_array($value)){
+                    foreach ($value as $v_item){
+                        echo $v_item.' ';
+                    }
+                }
+                else{
+                    echo $value.' ';
+                }
+            }
+        }
+
+//        echo $this->data[2]['name'];
+
+        /*foreach ($this->data as $index => $item){
+            echo '<br/>';
+            echo "index: ".$index . "Value :".$item.' ';
+        }*/
     }
 }
