@@ -18,6 +18,8 @@ class HelloWorld
 
     public function index(){
 //        echo $this->message;
+
+//        And operations
         echo '<br/>';
         echo ($this->x < $this->y) && ($this->y < $this->z);
         echo '<br/>';
@@ -26,6 +28,16 @@ class HelloWorld
         echo ($this->x < $this->y) && ($this->y > $this->z);
         echo '<br/>';
         echo ($this->x > $this->y) && ($this->y < $this->z);
+        echo '<br/>';
+
+//      OR Operations
+        echo ($this->x < $this->y) || ($this->y < $this->z);
+        echo '<br/>';
+        echo ($this->x > $this->y) || ($this->y > $this->z);
+        echo '<br/>';
+        echo ($this->x < $this->y) || ($this->y > $this->z);
+        echo '<br/>';
+        echo ($this->x > $this->y) || ($this->y < $this->z);
         echo '<br/>';
 
     }
